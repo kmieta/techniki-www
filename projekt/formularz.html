@@ -8,70 +8,82 @@
 </head>
 <body>
     <header>
-        <h1>Sign up your Bunny</h1>
-        <h2>to the next issue of 'Bunny of the week'</h2>
+
+        <div class="naglowek">
+            <h1>Sign up your Bunny</h1>
+            <h2>to the next issue of 'Bunny of the week'</h2>
+        </div>
+
     </header>
+
     <main>
+
         <form class="formularz" id="formularz">
-            <div class="form-control">
-                <label for="name"><b>Name</b></label>
-                <input id="name" type="text" class="task_input" placeholder="Type your name here">
+            <div class="rzad">
+                <div class="form-control">
+                    <label for="name"><b>Name</b></label>
+                    <input id="name" type="text" class="task_input" placeholder="Type your name here">
+                </div>
+                <div class="form-control">
+                    <label for="email"><b>E-mail address</b></label>
+                    <input id="email" type="email" class="task_input" placeholder="Type e-mail" required>
+                </div>
             </div>
-            <div class="form-control">
-                <label for="email"><b>E-mail</b></label>
-                <input id="email" type="email" class="task_input" placeholder="Type e-mail" required>
-            </div>
+       
+         <div class="rzad">
             <div class="form-control">
                 <label for="name-bunny"><b>Bunny's name</b></label>
                 <input id="name-bunny" type="text" class="task_input" placeholder="Type Bunny's name">
             </div>
             <div class="form-control">
-                <label for="age-bunny"><b>Bunny's age</b></label>
+                <label for="age-bunny"><b>Bunny's age (years)</b></label>
                 <input id="name-bunny" type="number" class="task_input" placeholder="Type Bunny's age">
             </div>
-        </form>
-
-        <div class="form-control">
-            <label><b>What breed is your bunny</b></label>
-            <br><label for="input1">
-                <input type="radio" name="input" id="input1">French lop
-            </label>
-            <br><label for="input2">
-                <input type="radio" name="input" id="input2">Lionhead
-            </label>
-            <br><label for="input3">
-                <input type="radio" name="input" id="input3">Netherland dwarf
-            </label>
-             <br><label for="input4">
-                <input type="radio" name="input" id="input4">Flemish giant
-            </label>
-            <br><label for="input5">
-                <input type="radio" name="input" id="input5">Holland lop
-            </label>
-            <br><label for="input6">
-                <input type="radio" name="input" id="input6">Other
-                <br><textarea name="comment" id="comment" class="task_input" placeholder="Please specify"></textarea>
-            </label>
         </div>
 
-        <div class="form-control">
-            <label><b>Please attach the cutest possible picture of your pet</b></label>
-            <br><label for="picture">Picture of your bunny:</label>
-            <br><input id="picture" name="picture" type="file">
-        </div>
-
-        <div class="form-control">
-            <label><b>Tell us something about them</b></label>
-            <br><textarea id="info" name="info" rows="7" cols="40"></textarea><br>
+        <div class="select" id="select">
+            <div class="form-control">
+                <label><b>What breed is your bunny</b></label>
+                <br><label for="input1">
+                    <input type="radio" name="input" id="input1">French lop
+                </label>
+                <br><label for="input2">
+                    <input type="radio" name="input" id="input2">Lionhead
+                </label>
+                <br><label for="input3">
+                    <input type="radio" name="input" id="input3">Netherland dwarf
+                </label>
+                <br><label for="input4">
+                    <input type="radio" name="input" id="input4">Flemish giant
+                </label>
+                <br><label for="input5">
+                    <input type="radio" name="input" id="input5">Holland lop
+                </label>
+                <br><label for="input6">
+                    <input type="radio" name="input" id="input6">Other
+                    <br><textarea name="comment" id="comment" class="task_input" placeholder="Please specify"></textarea>
+                </label>
+            </div>
         </div>
         
         <div class="form-control">
+            <label for="pictures"><b>Please attach the cutest possible picture of your pet</b></label>
+            <br><label for="pictures">Picture of your bunny:</label>
+            <input id="picture" name="picture" type="file">
+        </div>
+       
+        <div class="form-control">
+            <label><b>Tell us something about them</b></label>
+            <br><textarea id="info" name="info" type="info" rows="7" cols="40"></textarea><br>
+        </div>
+         </form>
+        <div class="button">
             <label for="consent">
             <input id="consent" type="checkbox" required>I consent to the processing of my personal data 
             </label>
         </div>
             <button type="submit">Sign up your Bunny</button>
-
+         </form>
     </main>
 
 </body>
