@@ -16,60 +16,74 @@
             "stopka";
     }
 
-    .naglowek { 
+    header { 
         grid-area: naglowek;
         display: flex;
-        flex-direction :row;
+        box-sizing: border-box;
         flex-wrap: wrap;
         justify-content: center;
         align-items: center;
         gap : 1rem;
-        flex: 1 1 200px;
-        padding-bottom: 15px;
+        padding-bottom: 5px;
+        width: 100%;
+        border: 3px solid var(--black);
+        border-top: 10px;
+       background-color: var(--purple);
+      
     }
 
-    .menu { grid-area: menu;
+    .menu { 
+      grid-area: menu;
             display: flex;
-            flex-direction :row;
+            flex-direction :column;
             flex-wrap: wrap;
             justify-content: center;
             align-items: center;
             gap : 1rem;
-            flex: 1 1 200px;
+            flex: 0 0;
             margin: 0 auto;
-            align-items: center;
+            width: 100%;
+            box-sizing: border-box;
+          
+
     }
 
     .dropdown {
   position: relative;
+  width: 100%;
+  margin: 0 auto;
 }
 
 .menu-button {
   background-color: var(--purple);
   color: var(--white);
-  padding: 16px;
+  padding: 8px;
   font-size: 2rem;
-  border: none;
+  border: 3px solid var(--black);
   cursor:pointer;
   border-radius: 10px;
-    height: 100%;
-  margin: 0 auto;
+  display: flex;
+  text-align: center;
+  box-sizing: border-box;
   width: 100%;
   align-items: center;
   justify-content: center;
  
 }
 .menu-content {
-    display: none;
-    position: absolute;
-    margin: 0 auto;
-    justify-content: center;
-    border-radius: 10px;
-    font-size: 1.2rem;
-    background-color: var(--purple);
-    min-width: 200px;
-    box-shadow: 0px 8px 16px 0px var(--yellow);
-}
+        display: none;
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        border-radius: 10px;
+        font-size: 1.2rem;
+        background-color: var(--purple);
+        box-sizing: border-box;
+        border: 3px solid var(--black);
+        border-top: none;
+    }
+
 
 .menu-content a {
   color: var(--white);
@@ -81,7 +95,9 @@
 }
 
 .menu-content a:hover {
-  background-color: #f1f1f1;
+  background-color: var(--white);
+  color: var(--purple);
+  
 }
 
 
@@ -94,4 +110,192 @@
 .dropdown:focus-within .menu-button {
     background-color: var(--white);
     color: var(--purple);
+}
+
+.stopka{
+
+  grid-area: stopka;
+    position: static;
+    box-sizing: border-box;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    margin-top: 5px;
+    background-color: var(--purple);
+    color: var(--white);
+    padding: 0.75rem;
+    font-size: 0.7rem;
+}
+
+.boczny {
+  color: var(--white);
+  background-color: var(--purple);
+        grid-area: boczny;
+        display: flex;
+        flex-direction :row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap : 0.5rem;
+        border-radius: 10px;
+        padding-bottom: 10px;
+        border: 3px solid var(--black);
+        text-align: center;
+        width: 80%;
+        margin: 0 auto;
+}
+
+.boczny h2 {
+        justify-content: center;
+        align-items: center;
+       margin-bottom: 0.5rem;
+      flex: 0 0 100%;
+      width: 100%;
+}
+
+.boczny h3 {
+  margin-top: 0;
+  margin-bottom: -0.001rem;
+        flex: 0 0 100%;
+      width: 100%;
+}
+
+.tresc-row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+.tresc-row h2 {
+    
+        display: flex;
+        flex-direction :row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        color: var(--white);
+        background-color: var(--purple);
+        padding-top: 1rem;
+        flex: 1 1 200px;
+        padding-bottom: 15px;
+              border-radius: 10px;
+              border: 3px solid var(--black);
+              text-decoration: underline;
+}
+
+.tresc-col {
+  flex: 50%;
+  padding: 0 4px;
+}
+
+.tresc-col img {
+  margin-top: 8px;
+  vertical-align: middle;
+}
+
+figure {
+      
+        display: flex;
+        flex-direction :column;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap : 0.5rem;
+        flex: 1 1 200px;
+        padding-bottom: 15px;
+        padding-inline: 7px;
+        border-radius: 10px;
+        padding-bottom: 10px;
+        border: 3px solid var(--black);
+        text-align: center;
+        width: fit-content;
+        margin: 0 auto;
+        background-color: var(--purple);
+        margin-bottom: 10px;
+        color: var(--white);
+        font-family: inherit;
+        font-size: larger;
+        
+}
+
+@media (min-width: 48rem) {
+  .tresc-row {
+    grid-area: tresc;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.strona {
+    display: grid;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 1rem;
+    grid-template-columns: 1fr 210px;
+    grid-template-areas:
+        "naglowek naglowek"
+        "menu menu"
+        "tresc boczny"
+        "stopka stopka";
+}
+
+.boczny {
+    color: var(--white);
+    background-color: var(--purple);
+    grid-area: boczny;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    border-radius: 10px;
+    padding-bottom: 10px;
+    border: 3px solid var(--black);
+    text-align: center;
+    width: 100%;
+    margin: 0;
+}
+
+.tresc-row {
+    grid-area: tresc;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    
+    gap: 0.5rem;
+    align-items: start;
+}
+
+.tresc-row h2 {
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--white);
+    background-color: var(--purple);
+    padding: 1rem;
+    border-radius: 10px;
+    border: 3px solid var(--black);
+    text-decoration: underline;
+    margin: 0;
+}
+
+.tresc-col {
+    display: contents;
+    gap: 0.5rem;
+}
+
+header { 
+    grid-area: naglowek;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--purple);
+    color: var(--white);
+    width: 100%;
+    box-sizing: border-box;
+}
+
+
 }

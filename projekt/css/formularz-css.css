@@ -1,8 +1,8 @@
 :root{
-    --white: #FFFFFF;
-    --yellow: #FFF4B8;
-    --black: #6B6B6B;
-    --purple: #E2C4FF;
+    --white:  #f6c6a8;
+    --yellow: #d17c7c;
+    --black: #46425e;
+    --purple: #5b768d;
 }
 body{
     font-family: Arial, Helvetica, sans-serif;
@@ -20,12 +20,15 @@ body{
 }
 
 .naglowek {
+
+    border-radius: 10px;
+
     margin-top: -1.15rem;
     margin-inline: 0.25rem;
     background-color: var(--purple);
     align-items: center;
     flex-direction: column;
-    color: var(--white);
+    color: var(--white );
     margin-bottom: 15px;
     padding: 0rem;
 
@@ -49,14 +52,14 @@ body{
         margin: auto  auto 0.7rem;
         padding: 0.5rem;
         background-color: var(--purple); 
-        color: var(--black);
+        color: var(--white);
         max-width:fit-content;
         flex-wrap: wrap;
         width: 100%;
         max-width: 650px;
         box-sizing: border-box;
         align-items: center;
-
+        border: 3px solid var(--black);
 }
 
 .form-control {
@@ -92,7 +95,7 @@ textarea {
     width: 95%;
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
-    border: 2.5px solid var(--white);
+    border: 2.5px solid var(--black);
     border-radius: 10px;
     background-color: var(--yellow);
     font-family: inherit;
@@ -107,7 +110,7 @@ input[type="radio"] {
 
 input[type="file"]{
     background-color: var(--yellow);
-    border: 2.5px solid var(--white);
+    border: 2.5px solid var(--black);
     border-radius: 5px;
     max-width: fit-content;
 }
@@ -115,10 +118,10 @@ input[type="file"]{
 button[type="submit"]{
 
     display: flex;
-    border: 2.5px solid var(--white);
+    border: 2.5px solid var(--black);
     width:75%;
     background-color: var(--purple);
-    color: var(--black);
+    color: var(--white);
     text-align: center;
     font-size: 20px;
     padding: 8px;
@@ -143,8 +146,8 @@ label[for="pictures"]{
 }
 
 #info {
-    background-color: var(--white);
-    border: 3px solid var(--yellow);
+    background-color: var(--yellow);
+    border: 3px solid var(--black);
 }
 
 @media (min-width: 48rem){
@@ -160,10 +163,10 @@ label[for="pictures"]{
     button[type="submit"]{
 
     display: flex;
-    border: 2.5px solid var(--white);
+    border: 2.5px solid var(--black);
     width:42%;
     background-color: var(--purple);
-    color: var(--black);
+    color: var(--white);
     text-align: center;
     font-size: 20px;
     padding: 8px;
