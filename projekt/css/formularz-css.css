@@ -9,6 +9,7 @@ body{
     background-color: var(--yellow);
     margin: 0;
     padding: 0;
+    width: 100%;
 }
 
 .rzad {
@@ -52,7 +53,7 @@ body{
         max-width:fit-content;
         flex-wrap: wrap;
         width: 100%;
-        max-width: 900px;
+        max-width: 650px;
         box-sizing: border-box;
         align-items: center;
 
@@ -171,21 +172,6 @@ label[for="pictures"]{
     justify-content: center;
     border-radius: 10px;
 
-}
-
-input[type="text"],
-input[type="email"],
-input[type="number"],
-textarea {
-    box-sizing: border-box;
-    width: 100%;
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
-    border: 2.5px solid var(--white);
-    border-radius: 10px;
-    background-color: var(--yellow);
-    font-family: inherit;
-    max-width: fit-content;
 }
 
 
