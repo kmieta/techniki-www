@@ -1,0 +1,196 @@
+@import "formularz-css.css";
+@import "strona-glowna-css.css";
+
+
+.strona-szczegol {
+  min-height: 100vh;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+}
+
+
+.stopka{
+    box-sizing: border-box;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    margin-top: auto;
+    background-color: var(--purple);
+    color: var(--white);
+    padding: 1rem;
+    font-size: 0.7rem;
+}
+
+picture {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: center;
+    border: 4px solid var(--black);
+    border-radius: 5px;
+}
+
+header {
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+    border: 6px solid var(--black);
+    margin-bottom: 1rem;
+}
+
+
+
+.title h2 {
+    margin-bottom: -0.5rem;
+}
+
+.description h3 {
+    
+    font-size: larger;
+    justify-content: center;
+    border-bottom: 2px solid var(--white);
+    padding-bottom: 0.25rem;
+    width: 95%;
+    margin: 1rem auto 0.5rem;
+
+}
+
+.title {
+        
+        display: flex;
+        flex-direction: column;
+        margin-top: 0.5rem;
+        border-radius: 10px;
+        margin: auto  auto 1rem;
+        padding: 0.3rem;
+        background-color: var(--purple); 
+        color: var(--white);
+        width: 90%;
+        box-sizing: border-box;
+        align-items: center;
+        border: 4px solid var(--black);
+}
+
+.description {
+        border-top: 3px;
+        display: flex;
+        flex-direction: column;
+        margin-top: 0.5rem;
+        border-radius: 10px;
+        margin: auto  auto 1rem;
+        padding: 0.3rem;
+        background-color: var(--purple); 
+        color: var(--white);
+        width: 90%;
+        box-sizing: border-box;
+        border: 4px solid var(--black);
+}
+.desc {
+    margin-inline: 0.7rem;
+}
+.descr {
+    text-align:justify;
+    margin-inline: 0.7rem;
+}
+
+
+@media (min-width: 48rem) {
+ .strona-szczegol {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+     grid-template-rows: auto 1fr auto;
+     box-sizing: border-box;
+    width: 100%;
+    margin: 0;
+    grid-template-areas: 
+    "naglowek"
+    "tresc"
+    "stopka";
+ }
+
+header {
+    grid-area: naglowek;
+ }
+
+ .bunny-winner {
+    grid-area: tresc;
+ }
+
+
+ .description {
+    grid-area: opis;
+ }
+
+
+ .stopka {
+    grid-area: stopka;
+ }
+
+picture img {
+    width: 100%;
+    height: auto;
+}
+
+ .title {
+    grid-area: zdjecie;
+    width: 87%;
+    
+ }
+
+ .bunny-winner {
+    align-self: start;
+    display: grid;
+    grid-template-columns: minmax(0, 2.5fr) minmax(0, 1fr);
+    grid-template-areas: "opis zdjecie";
+    gap: 1.5rem;
+    width: calc(100% - 2rem);
+    margin: 0 auto 1rem;
+    padding: 1.5rem;
+    box-sizing: border-box;
+    background-color: var(--purple);
+    color: var(--white);
+    border: 4px solid var(--black);
+    border-radius: 10px;
+  }
+
+
+  .title,
+  .description {
+    margin: 0;
+    padding: 0;
+    width: auto;
+    background: none;
+    border: none;
+    border-radius: 0;
+    min-width: 0;
+  }
+
+  .description {
+    grid-area: opis;
+    justify-content: center;
+    padding-right: 1.5rem;
+    border-right: 2px solid var(--white);
+    font-size: 1.4rem;
+  }
+
+  .title {
+    grid-area: zdjecie;
+    justify-content: center;
+  }
+
+  .description h3 {
+    margin: 2rem auto 0.75rem;
+  }
+
+.descr {
+    line-height: 1.4;
+    margin-left: 2.5rem;
+}
+
+.desc {
+   margin-left: 2.5rem;
+}
+
+}
