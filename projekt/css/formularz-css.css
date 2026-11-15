@@ -154,6 +154,7 @@ button[type="submit"]{
     align-items: center;
     justify-content: center;
     border-radius: 10px;
+    margin-bottom: 10px;
 
 }
 
