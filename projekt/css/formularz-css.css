@@ -203,5 +203,13 @@ button[type="submit"]{
 }
 
 
-
+}
+@media (prefers-color-scheme: dark) {
+    :root{
+    --black:  #5b768d;
+    --purple: #d17c7c;
+    --yellow: #46425e;
+    --white: #46425e;
+ 
+}
 }
