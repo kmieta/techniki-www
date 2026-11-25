@@ -1,0 +1,54 @@
+@import "formularz-css.css";
+@import "strona-glowna-css.css";
+@import "szczegol-css.css";
+
+.style {
+  width: 100%;
+  overflow-x: auto;
+  font-family: sans-serif;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  background-color: var(--white);
+  color: var(--purple);
+}
+
+.table th,
+.table td {
+  border: 1px solid #d17c7c;
+  padding: 8px;
+}
+
+.table th {
+  background-color: var(--black);
+  color: var(--yellow);
+}
+
+@media (min-width: 48rem){
+    .bunny-winner {
+        align-self: center;
+    }
+}
+
+@media (prefers-color-scheme: light ){
+.table {
+
+  background-color: var(--yellow);
+  color: var(--black);
+}
+
+.table th {
+
+  color: var(--white);
+}
+
+.table th,
+.table td {
+  border: 1px solid #5b768d;
+
+}
+
+}
